@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.redlimerl.mcsr.fishtank.mixins",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "ClientWorldMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

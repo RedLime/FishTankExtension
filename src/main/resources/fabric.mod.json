@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "fishtank",
+  "version": "${version}",
+  "name": "Fishtank",
+  "description": "SpeedRunIGT extension for fishtank category",
+  "authors": [
+    "RedLime"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/fishtank/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.redlimerl.mcsr.fishtank.FishTank"
+    ]
+  },
+  "mixins": [
+    "fishtank.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.12.2",
+    "minecraft": "1.16.1",
+    "speedrunigt": "*"
+  }
+}
