@@ -2,7 +2,6 @@ package com.redlimerl.mcsr.fishtank.mixins;
 
 import com.redlimerl.mcsr.fishtank.FishTank;
 import com.redlimerl.speedrunigt.timer.InGameTimer;
-import com.redlimerl.speedrunigt.timer.RunCategory;
 import com.redlimerl.speedrunigt.timer.TimerStatus;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -41,7 +40,7 @@ public abstract class ClientWorldMixin extends World {
                 && entity.squaredDistanceTo(lastWaterBlockPos.getX(), lastWaterBlockPos.getY(), lastWaterBlockPos.getZ()) < playerRange) {
             InGameTimer timer = InGameTimer.getInstance();
 
-            if (timer.getCategory() == RunCategory.CUSTOM && timer.getStatus() != TimerStatus.NONE
+            if (timer.getCategory() == FishTank.FISH_TANK_CATEGORY && timer.getStatus() != TimerStatus.NONE
                     && FishTank.checkFishTank(this, (FishEntity) entity)) {
                 InGameTimer.complete();
             }
@@ -52,7 +51,7 @@ public abstract class ClientWorldMixin extends World {
     public void onBlockUpdate(BlockPos pos, BlockState oldState, BlockState newState, int flags, CallbackInfo ci) {
         InGameTimer timer = InGameTimer.getInstance();
 
-        if (timer.getCategory() == RunCategory.CUSTOM && timer.getStatus() != TimerStatus.NONE) {
+        if (timer.getCategory() == FishTank.FISH_TANK_CATEGORY && timer.getStatus() != TimerStatus.NONE) {
             if (flags == 11 && newState.getBlock() == Blocks.WATER) {
                 lastWaterBlockPos = pos;
             }

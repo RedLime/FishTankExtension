@@ -9,11 +9,13 @@
   ],
   "contact": {},
   "license": "MIT",
-  "icon": "assets/fishtank/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": [
       "com.redlimerl.mcsr.fishtank.FishTank"
+    ],
+    "speedrunigt": [
+      "com.redlimerl.mcsr.fishtank.FishTankImpl"
     ]
   },
   "mixins": [
@@ -22,6 +24,6 @@
   "depends": {
     "fabricloader": ">=0.12.2",
     "minecraft": "1.16.1",
-    "speedrunigt": "*"
+    "speedrunigt": ">=7.0"
   }
 }
