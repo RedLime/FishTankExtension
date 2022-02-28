@@ -24,6 +24,6 @@
   "depends": {
     "fabricloader": ">=0.12.2",
     "minecraft": "1.16.1",
-    "speedrunigt": ">=8.0"
+    "speedrunigt": ">=7.0"
   }
 }
